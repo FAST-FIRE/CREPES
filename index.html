@@ -1,5 +1,11 @@
+<!-- Template: https://github.com/nerfies/nerfies.github.io -->
+<!-- Author: LiuQi, contact: 17729920326 -->
+<!-- Latest update time: 2023/06/27 -->
+<!-- Way to find CSS using: view index.html in browser and press F12 -->
+
 <!DOCTYPE html>
 <html>
+<!-- web head -->
 <head>
   <meta charset="utf-8">
   <meta name="description"
@@ -7,38 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CREPES: Cooperative RElative Pose Estimation System</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
-<!--   <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script> -->
-
-<!--   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet"> -->
-
+<!-- 安装Bulma框架 -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-<!--   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+<!-- 自定义样式 -->
+  <link rel="stylesheet" href="./static/css/index.css">
+<!-- Icon库 -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-<!--   <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-<!--   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script> -->
+<!--  -->
+<!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+<!--   <script src="./static/js/bulma-slider.min.js"></script>-->
 </head>
+
+<!-- End web head -->
+
 
 <!--  web body  -->
 <body>
@@ -49,6 +38,7 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">CREPES: Cooperative RElative Pose Estimation System</h1>
           <div class="is-size-5 publication-authors">
+            <!-- 作者连接缺失状态 -->
             <span class="author-block">
               <a>Zhiren Xun</a><sup>1,2</sup>,</span>
             <span class="author-block">
@@ -72,12 +62,12 @@
               <a>Yanjun Cao</a><sup>1,2</sup>
             </span>
           </div>
-<!-- 机构  -->
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Zhejiang University,</span>
             <span class="author-block"><sup>2</sup>Huzhou Institute of Zhejiang University </span>
           </div>
-<!-- 其余按钮 -->
+          <!-- end author -->
+          <!-- Button -->
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -90,6 +80,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              <!-- arxiv Link.  -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2302.01036"
                    class="external-link button is-normal is-rounded is-dark">
@@ -107,18 +98,19 @@
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code (coming soon)</span>
-                  </a>
+                </a>
               </span>
             </div>
           </div>
+          <!-- end Button -->
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 第一行视频 -->
-<section class="overall teaser">
+<!-- First Video -->
+<section class="teaser">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-five-sixths">
@@ -145,7 +137,7 @@
   </div>
 </section>
 
-<!-- 摘要abstract部分  -->
+<!-- abstract  -->
 <section class="section">
   <div class="container">
     <!-- Abstract. -->
@@ -184,7 +176,7 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+<!--/ Abstract. -->
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
@@ -203,8 +195,7 @@
   </div>
 </section>
 
-
-<!-- 软硬件系统部分 -->
+<!-- System architecture  -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -220,19 +211,16 @@
         </div>
       </div>
     </div>
-    <!-- Hardware and software. -->
+
     <div class="columns is-centered has-text-centered">
-          <center>
-              <img src="static/images/system.jpg" style="width: 75%;" alt="">
-          </center>
-      </div>
+      <img src="static/images/system.jpg" style="width: 75%;" alt="">
     </div>
   </div>
 </section>
+<!-- End System architecture-->
 
 
-
-<!-- 硬件迭代部分 -->
+<!-- Hardware iterations -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -246,42 +234,36 @@
         </div>
       </div>
     </div>
-    <!-- Hardware and software. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-          <center>
-              <img src="static/images/Hardware.jpg" style="width: 85%;" alt="">
-          </center>
-        </div>
+        <img src="static/images/Hardware.jpg" style="width: 85%;" alt="">
       </div>
     </div>
   </div>
 </section>
+<!-- End Hardware iterations -->
 
-<!-- 系统误差测试  -->
+<!-- System error and applications -->
 <section class="section">
-  <!-- 描述 -->
+  <!-- system error -->
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Crepes relative pose estimate in real world </h2>
         <h3 class="title is-4">We use the NOKOV optical system as groundtruth</h3>
-        <div class="content has-text-justified" >
-          <p>
-
-          </p>
+        <div class="content has-text-justified " >
           <center>
             <video width="80%" muted autoplay loop style="border-radius:10px; ">
-                <source src="static/videos/error test.mp4" type="video/mp4"></source>
-                <source src="static/videos/error test.ogg" type="video/ogg"></source>
-                your browser does not support the video tag
+              <source src="static/videos/error test.mp4" type="video/mp4"></source>
+              <source src="static/videos/error test.ogg" type="video/ogg"></source>
+              your browser does not support the video tag
             </video>
-            </center>
+          </center>
         </div>
       </div>
     </div>
   </div>
-  <!-- 误差图像 -->
+  <!-- dynamic and static errors -->
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <!-- static error -->
@@ -293,29 +275,33 @@
             The median distance error is under <b><font color="red">0.1 m</font></b>. 
             The median orientation error is under<b><font color="red"> 0.4°</font> </b>.
           </p>
-          <img src="./static/images/static error.jpg" style="width: 100%;" alt="">
         </div>
       </div>
       <!-- dynamic error -->
       <div class="column">
-        <h2 class="title is-3">Dynamic Errors</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Two robots mutual localization in a dynamic situation. The distance is within the range of 5 m to 10 m.
-              The median distance error is under <b><font color="red">0.1 m</font></b>. 
-              The median orientation error is under <b><font color="red">2°</font></b>.
-            </p>
-            </p>
-            <img src="./static/images/dynamic error.jpg" style="width: 100%;" alt="">
-          </div>
-
+        <div class="content">
+          <h2 class="title is-3">Dynamic Errors</h2>
+          <p>
+            Two robots mutual localization in a dynamic situation. The distance is within the range of 5 m to 10 m.
+            The median distance error is under <b><font color="red">0.1 m</font></b>. 
+            The median orientation error is under <b><font color="red">2°</font></b>.
+          </p>
         </div>
       </div>
     </div>
-    <!--/ dynamic error -->
+ 
+    <div class="columns is-centered">
+      <div class="column">
+        <img src="./static/images/static error.jpg" style="width: 100%;" alt="">
 
-    <!-- Application. -->
+      </div>
+      <div class="column">
+        <img src="./static/images/dynamic error.jpg" style="width: 100%;" alt="">
+      </div>     
+    </div>
+  <!-- End system errors -->
+    
+  <!-- Application. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Applications</h2>
@@ -330,7 +316,6 @@
             </video>
           </center>
         </div>
-        <br/>
         <!-- application2 -->
         <h3 class="title is-4">Occlusion Scenario</h3>
         <div class="content has-text-justified">
@@ -340,34 +325,30 @@
             The following figure shows the groundtruth position and the remapped relative position of five robots.
           </p>
           <center>
-            <video width="100%" muted autoplay loop style="border-radius:10px; ">
+            <video width="95%" muted autoplay loop style="border-radius:10px; ">
                 <source src="static/videos/NLOS.mp4" type="video/mp4"></source>
                 <source src="static/videos/NLOS.ogg" type="video/ogg"></source>
                 your browser does not support the video tag
             </video>
           </center>
         </div>
-        <br/>
-
         <!-- application3 -->
         <h3 class="title is-4">Collaborate with the MPC controller</h3>
         <div class="content has-text-justified">
           <p>
             The UGV is controlled arbitrarily using Crepes and MPC controller ,and the UAV follows a circle trajectory.
           </p>
+          <center>
+            <video width="95%" muted autoplay loop style="border-radius:10px; ">
+                <source src="static/videos/MPC controller.mp4" type="video/mp4"></source>
+                <source src="static/videos/MPC controller.ogg" type="video/ogg"></source>
+                your browser does not support the video tag
+            </video>
+          </center>
         </div>
-        <center>
-          <video width="100%" muted autoplay loop style="border-radius:10px; ">
-              <source src="static/videos/MPC controller.mp4" type="video/mp4"></source>
-              <source src="static/videos/MPC controller.ogg" type="video/ogg"></source>
-              your browser does not support the video tag
-          </video>
-        </center>
-
       </div>
     </div>
-
-
+  <!-- End application. -->
 
   </div>
 </section>
@@ -376,12 +357,16 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{xun2023crepes,
-      title={CREPES: Cooperative RElative Pose Estimation System}, 
-      author={Zhiren Xun and Jian Huang and Zhehan Li and Zhenjun Ying and Yingjian Wang and Chao Xu and Fei Gao and Yanjun Cao},
-      year={2023},
-      archivePrefix={IROS}
-}</code></pre>
+    <pre>
+      <code>
+        @misc{xun2023crepes,
+        title={CREPES: Cooperative RElative Pose Estimation System}, 
+        author={Zhiren Xun and Jian Huang and Zhehan Li and Zhenjun Ying and Yingjian Wang and Chao Xu and Fei Gao and Yanjun Cao},
+        year={2023},
+        archivePrefix={IROS}
+        }
+      </code>
+    </pre>
   </div>
 </section>
 
@@ -393,24 +378,20 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            <b>
-            Contact us: 
-             </b>         
+            <b>Contact us:</b>         
           </p>
+          <p>
             <a rel="license" href="http://zju-fast.com/">
               <img src="static/images/Fastlab.jpg" style="width: 200px;" alt=""> 
             </a>    
-            &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    
             <a rel="license" href="http://hzi.zju.edu.cn/">
               <img src="static/images/Hizju.jpg" style="width: 220px;" alt="">
-            </a>
-                                                 
+            </a>                                
           </p>
-          
         </div>
       </div>
     </div>  
-    
     <!-- license -->
     <div class="columns is-centered">
       <div class="column is-8">
@@ -420,12 +401,12 @@
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          
         </div>
       </div>
     </div>
   </div>
 </footer>
+<!--/ endfooter -->
 
 </body>
 </html>
