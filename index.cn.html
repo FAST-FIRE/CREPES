@@ -1,0 +1,420 @@
+<!-- Template: https://github.com/nerfies/nerfies.github.io -->
+<!-- Author: LiuQi, contact: 17729920326 -->
+<!-- Latest update time: 2023/06/27 -->
+<!-- Way to find CSS using: view index.html in browser and press F12 -->
+
+<!DOCTYPE html>
+<html>
+<!-- web head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CREPES: Cooperative RElative Pose Estimation System.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CREPES: 协作式相对位姿估计系统</title>
+
+<!-- 安装Bulma框架 -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+<!-- 自定义样式 -->
+  <link rel="stylesheet" href="./static/css/index.css">
+<!-- Icon库 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+
+
+</head>
+
+<!-- End web head -->
+<header style="position: fixed;top: 0; z-index: 1000;width: 100%;">
+  <div style="position: absolute;right: 100px;top: 10px;">
+    <div class="container is-max-desktop">
+      <div class="columns">
+        <div class="clumn is-4 is-offset-8">
+          <button class="button is-light is-large">
+            <a href="./index.html">EN</a>
+          </button>
+        </div>       
+      </div>
+    </div>
+  </div>  
+</header>
+
+
+
+
+
+<!--  web body  -->
+<body>
+<!-- 中英文切换 -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CREPES: 协作式相对位姿估计系统</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- 作者连接缺失状态 -->
+            <span class="author-block">
+              <a>寻芝任</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a>黄坚</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a>李哲晗</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a>应镇骏</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>王英建</a><sup>1,2</sup>,
+            </span><br>
+            <span class="author-block">
+              <a>许超</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a>高飞</a><sup>1,2</sup>
+            </span>
+            <span class="author-block">
+              <a>曹燕军</a><sup>1,2</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>浙江大学,</span>
+            <span class="author-block"><sup>2</sup>浙江大学湖州研究院 </span>
+          </div>
+          <!-- end author -->
+          <!-- Button -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2302.01036.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>论文</span>
+                </a>
+              </span>
+              <!-- arxiv Link.  -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2302.01036"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/fast-fire-crepes/crepes_ws"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>代码 (敬请期待)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <!-- end Button -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- First Video -->
+<section class="teaser">
+    <div class="container">
+        <center>
+            <div class="columns is-centered">
+                <div class="column is-five-sixths">
+                <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+                    <source src="static/videos/manual control.mp4" type="video/mp4">
+                </video>
+                <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+                    <source src="static/videos/program comtrol.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+        </center>
+    </div>
+  <div class="container">
+        <center>
+            <div class="columns is-centered">
+                <div class="column is-five-sixths">
+                    <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+                        <source src="static/videos/multi-robots.mp4" type="video/mp4">
+                    </video>
+                    <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+                        <source src="static/videos/long-distance.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </center>
+  </div>
+</section>
+
+<!-- abstract  -->
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">摘要</h2>
+        <div class="content has-text-justified">
+          <p>
+            机器人的相互定位在多机器人合作中起着关键作用。本项目提出了一种新型的专注于多机器人六自由度(DOF)相对姿态的估计系统 <font color="red"><i><b>CREPES</b></i></font>。
+          </p>
+          <p>
+            CREPES硬件结构设计紧凑，其硬件结构包含红外LED，鱼眼相机，超宽带测距模块（UWB）和惯性测量单元（IMU）。
+            通过利用红外光通信，实现相机视觉检测和UWB测距之间的数据关联。
+            通过相机解算的方向信息与UWB测距数据的融合可以获取CREPES相对的3-DOF位置数据。
+            结合相邻CREPES设备的相对位置和IMU重力方向约束，我们可以从一帧传感器测量数据中估计出6-DOF的相对姿势。
+          </p>
+          <p>
+            此外，CREPES包含一个基于误差状态卡尔曼滤波器（ESKF）的估计器，以提高系统的准确性和稳健性。当有多个邻居时，引入姿势图优化（PGO）算法，以进一步提高系统精度。
+            我们进行了大量的实验来证明CREPES在双机协作、集群编队应用中的准确性，以及在复杂定位环境下的性能。
+          </p>
+        </div>
+      </div>
+    </div>
+<!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">论文视频</h2>
+          <center>
+            <video width="75%" muted autoplay loop style="border-radius:10px; ">
+                <source src="static/videos/Crepes_video.mp4" type="video/mp4"></source>
+                <source src="static/videos/Crepes_video.ogg" type="video/ogg"></source>
+                您的浏览器不支持该视频格式
+            </video>
+          </center>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- System architecture  -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">CREPES的硬件设计及软件架构</h2>
+        <div class="content has-text-justified" >
+          <p>
+            CREPES的硬件系统包含一个惯性测量单元（IMU），一个超宽带测距模块（UWB），一个工业相机和一组红外LED。        
+            相对位姿的直接检测算法采集相邻设备的ID、位置向量（视觉检测）、相对距离（来自UWB）和惯性检测单元IMU数据，用于解算相邻设备位姿的原始估计。         
+            然后，ESKF算法模块使用惯性单元IMU数据对原始估计位姿进行滤波。当周围有多个邻居CREPES时，将采用PGO模块进一步提高位姿估计性能。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <img src="static/images/system.jpg" style="width: 75%;" alt="">
+    </div>
+  </div>
+</section>
+<!-- End System architecture-->
+
+
+<!-- Hardware iterations -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">硬件系统迭代</h2>
+        <div class="content has-text-justified" >
+          <p>
+            为了使设备更加便携，减少硬件输出端口，CREPES的硬件经历了四次迭代优化。
+            从CREPES1到CREPES4，最终CREPES4设备的重量、体积和通信距离列示如下。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <img src="static/images/Hardware_cn.jpg" style="width: 85%;" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hardware iterations -->
+
+<!-- System error and applications -->
+<section class="section">
+  <!-- system error -->
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">CREPES相对位姿估计系统实机测试</h2>
+        <h3 class="title is-4">采用NOKOV动捕系统输出作为真值</h3>
+        <div class="content has-text-justified " >
+          <center>
+            <video width="80%" muted autoplay loop style="border-radius:10px; ">
+              <source src="static/videos/error test.mp4" type="video/mp4"></source>
+              <source src="static/videos/error test.ogg" type="video/ogg"></source>
+              您的浏览器不支持该视频格式
+            </video>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dynamic and static errors -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- static error -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">静态测试误差</h2>
+          <p>
+            双机在静止状态下进行定位。测试距离分别为：2.5米，5米和10米。
+            位置误差的中位数小于<b><font color="red">0.1米</font></b>。
+            姿态误差的中位数小于<b><font color="red">0.4度</font></b>。
+          </p>
+        </div>
+      </div>
+      <!-- dynamic error -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">动态测试误差</h2>
+          <p>
+            双机在运动状态下进行定位。双机运动距离范围在5米至10米。
+            位置误差的中位数小于<b><font color="red">0.1米</font></b>。
+            姿态误差的中位数小于<b><font color="red">2度</font></b>。
+          </p>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="columns is-centered">
+      <div class="column">
+        <img src="./static/images/static error.jpg" style="width: 100%;" alt="">
+
+      </div>
+      <div class="column">
+        <img src="./static/images/dynamic error.jpg" style="width: 100%;" alt="">
+      </div>     
+    </div>
+  <!-- End system errors -->
+    
+  <!-- Application. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">CREPES应用</h2>
+        <!-- application1 -->
+        <h3 class="title is-4">极限姿态测试</h3>
+        <div class="content has-text-justified">
+          <center>
+            <video width="100%" muted autoplay loop style="border-radius:10px; ">
+                <source src="static/videos/Big pose.mp4" type="video/mp4"></source>
+                <source src="static/videos/Big pose.ogg" type="video/ogg"></source>
+                您的浏览器不支持该视频格式
+            </video>
+          </center>
+        </div>
+        <!-- application2 -->
+        <h3 class="title is-4">非视距定位场景</h3>
+        <div class="content has-text-justified">
+          <p>
+            在非视距和遮挡情况下，如何实现设备的位姿估计和定位是一个巨大的挑战。
+            该实验中，我们使用五个机器人在存在遮挡的复杂场景下进行定位。下列视频展示了实验中NOKOV动捕系统真值输出和CREPES系统相对定位输出的数据对比。
+          </p>
+          <center>
+            <video width="95%" muted autoplay loop style="border-radius:10px; ">
+                <source src="static/videos/NLOS.mp4" type="video/mp4"></source>
+                <source src="static/videos/NLOS.ogg" type="video/ogg"></source>
+                您的浏览器不支持该视频格式
+            </video>
+          </center>
+        </div>
+        <!-- application3 -->
+        <h3 class="title is-4">MPC控制器协同应用</h3>
+        <div class="content has-text-justified">
+          <p>
+            地面车辆搭载CREPES设备，并通过遥控控制。无人飞行器搭载相同CREPES进行定位，并跟踪地面车辆进行绕环轨迹运动。
+          </p>
+          <center>
+            <video width="95%" muted autoplay loop style="border-radius:10px; ">
+                <source src="static/videos/MPC controller.mp4" type="video/mp4"></source>
+                <source src="static/videos/MPC controller.ogg" type="video/ogg"></source>
+                您的浏览器不支持该视频格式
+            </video>
+          </center>
+        </div>
+      </div>
+    </div>
+  <!-- End application. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre>
+      <code>
+        @misc{xun2023crepes,
+        title={CREPES: Cooperative RElative Pose Estimation System}, 
+        author={Zhiren Xun and Jian Huang and Zhehan Li and Zhenjun Ying and Yingjian Wang and Chao Xu and Fei Gao and Yanjun Cao},
+        year={2023},
+        archivePrefix={IROS}
+        }
+      </code>
+    </pre>
+  </div>
+</section>
+
+<!-- endfooter -->
+<footer class="footer">
+  <div class="container">
+    <!-- contact -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            <b>联系我们：</b>         
+          </p>
+          <p>
+            <a rel="license" href="http://zju-fast.com/">
+              <img src="static/images/Fastlab.jpg" style="width: 200px;" alt=""> 
+            </a>    
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    
+            <a rel="license" href="http://hzi.zju.edu.cn/">
+              <img src="static/images/Hizju.jpg" style="width: 220px;" alt="">
+            </a>                                
+          </p>
+        </div>
+      </div>
+    </div>  
+    <!-- license -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/ endfooter -->
+
+</body>
+</html>

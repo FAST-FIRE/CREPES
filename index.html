@@ -21,16 +21,32 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-<!--  -->
-<!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
-<!--   <script src="./static/js/bulma-slider.min.js"></script>-->
+
+
+
+
 </head>
 
 <!-- End web head -->
+<header style="position: fixed;top: 0; z-index: 1000;width: 100%">
+  <div style="position: absolute;right: 100px;top: 10px;">
+    <div class="container is-max-desktop">
+      <div class="columns">
+        <div class="clumn is-4 is-offset-8">
+          <button class="button is-light is-large">
+            <a href="./index.cn.html">CN</a>
+          </button>
+        </div>       
+      </div>
+    </div>
+  </div>  
+</header>
 
 
 <!--  web body  -->
 <body>
+<!-- 中英文切换 -->
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -112,28 +128,32 @@
 <!-- First Video -->
 <section class="teaser">
   <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-five-sixths">
-        <video id="teaser_video" width=49.5% muted autoplay loop style="border-radius:10px; ">
-          <source src="static/videos/manual control.mp4" type="video/mp4">
-        </video>
-        <video id="teaser_video" width=49.5% muted autoplay loop style="border-radius:10px; ">
-          <source src="static/videos/program comtrol.mp4" type="video/mp4">
-        </video>
+    <center>
+      <div class="columns is-centered">
+        <div class="column is-five-sixths">
+          <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+            <source src="static/videos/manual control.mp4" type="video/mp4">
+          </video>
+          <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+            <source src="static/videos/program comtrol.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-    </div>
+    </center>
   </div>
   <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-five-sixths">
-        <video id="teaser_video" width=49.5% muted autoplay loop style="border-radius:10px; ">
-          <source src="static/videos/multi-robots.mp4" type="video/mp4">
-        </video>
-        <video id="teaser_video" width=49.5% muted autoplay loop style="border-radius:10px; ">
-            <source src="static/videos/long-distance.mp4" type="video/mp4">
-        </video>
+    <center>
+      <div class="columns is-centered">
+        <div class="column is-five-sixths">
+          <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+            <source src="static/videos/multi-robots.mp4" type="video/mp4">
+          </video>
+          <video id="teaser_video" width=40% muted autoplay loop style="border-radius:10px; ">
+              <source src="static/videos/long-distance.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-    </div>
+    </center>
   </div>
 </section>
 
